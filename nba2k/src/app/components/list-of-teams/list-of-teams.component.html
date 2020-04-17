@@ -1,0 +1,17 @@
+<p>list-of-teams works!</p>
+
+<!--     <table class="table" *ngIf='teams'>
+        <tbody>
+            <tr *ngFor='let team of teams'>
+                <td>
+                    {{team.teamName}}
+                </td>
+            </tr>
+        </tbody>
+    </table> -->
+
+    <ol *ngIf='teams'>
+        <li *ngFor='let team of teams'>
+            <span>{{team.teamName}}</span>
+        </li>
+    </ol>

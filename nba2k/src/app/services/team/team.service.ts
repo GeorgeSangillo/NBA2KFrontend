@@ -16,7 +16,13 @@ export class TeamService {
 
   constructor(private http: HttpClient) { }
 
-  /** GET hero by id. Will 404 if id not found */
+  /** GET all Teams */
+  getAllTeams(): Observable<Team[]> {
+    const url = `${this.teamUrl}/getAllTeams`;
+    return this.http.get<Team[]>(url, this.httpOptions);
+  }
+
+  /** GET Team by teamName. */
   getTeam(teamName: string): Observable<Team> {
     const url = `${this.teamUrl}/getTeam?teamName=${teamName}`;
     console.log('URL: ' + url);

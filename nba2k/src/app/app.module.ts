@@ -11,6 +11,7 @@ import { UpdateTeamComponent } from './components/update-team/update-team.compon
 import { PlayerService } from './services/player/player.service';
 import { TeamService } from './services/team/team.service';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { ListOfTeamsComponent } from './components/list-of-teams/list-of-teams.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     ViewTeamComponent,
     CreateTeamComponent,
     UpdateTeamComponent,
-    NavbarComponent
+    NavbarComponent,
+    ListOfTeamsComponent
   ],
   imports: [
     BrowserModule,

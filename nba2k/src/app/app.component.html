@@ -2,34 +2,23 @@
     integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
 
-
-
 <div class="jumbotron jumbotron-fluid">
     <div class="container">
         <h1 class="display-4">NBA2K</h1>
     </div>
 </div>
 
-
 <div class="container">
     <app-navbar></app-navbar>
     <div class="row">
         <div class="col-sm">
-            <p>app works!</p>
+            <app-list-of-teams></app-list-of-teams>
         </div>
         <div class="col-lg">
-            <app-view-team></app-view-team>
+            <router-outlet></router-outlet>
         </div>
     </div>
 </div>
-
-
-
-
-
-
-
-
 
 
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
