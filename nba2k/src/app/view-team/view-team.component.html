@@ -1,0 +1,59 @@
+<p>view-team works!</p>
+<div *ngIf="team">
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-4">{{team.teamName}}</h1>
+        </div>
+    </div>
+</div>
+
+<div class='table-responsive'>
+    <table class="table" *ngIf='team'>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Position</th>
+                <th>Inside Scoring</th>
+                <th>Outside Scoring</th>
+                <th>Playmaking</th>
+                <th>Athleticism</th>
+                <th>Defense</th>
+                <th>Rebounding</th>
+                <th>Salary</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Below *ngFor is a structural directive that can alter the entire structure of the DOM; some common directives are
+                    *ngFor, *ngIf, *ngSwitch, *ngDefault, *ngIfElse -->
+            <tr *ngFor='let player of team.players'>
+                <td>
+                    {{player.playerFirstName}} {{player.playerLastName}}
+                </td>
+                <td>
+                    {{player.positionPrimary | titlecase}}<span *ngIf='player.positionSecondary'>/{{player.positionSecondary | titlecase}}</span>
+                </td>
+                <td>
+                    {{player.gradeIns}}
+                </td>
+                <td>
+                    {{player.gradeOut}}
+                </td>
+                <td>
+                    {{player.gradePly}}
+                </td>
+                <td>
+                    {{player.gradeAth}}
+                </td>
+                <td>
+                    {{player.gradeDef}}
+                </td>
+                <td>
+                    {{player.gradeReb}}
+                </td>
+                <td>
+                    {{player.salary}}
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
