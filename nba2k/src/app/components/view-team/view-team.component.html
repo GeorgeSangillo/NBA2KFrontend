@@ -1,10 +1,6 @@
 <p>view-team works!</p>
 <div *ngIf="team">
-    <div class="jumbotron jumbotron-fluid">
-        <div class="container">
-            <h1 class="display-4">{{team.teamName}}</h1>
-        </div>
-    </div>
+    <h1 class="display-4">{{team.teamName}}</h1>
 </div>
 
 <div class='table-responsive'>
@@ -30,7 +26,8 @@
                     {{player.playerFirstName}} {{player.playerLastName}}
                 </td>
                 <td>
-                    {{player.positionPrimary | titlecase}}<span *ngIf='player.positionSecondary'>/{{player.positionSecondary | titlecase}}</span>
+                    {{player.positionPrimary | titlecase}}<span
+                        *ngIf='player.positionSecondary'>/{{player.positionSecondary | titlecase}}</span>
                 </td>
                 <td>
                     {{player.gradeIns}}
