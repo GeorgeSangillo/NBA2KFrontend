@@ -6,9 +6,9 @@
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav">
         <a class="nav-item nav-link" routerLink="/team/create">Create-A-Team</a>
-        <a class="nav-item nav-link" routerLink="/team/{{teamName}}/view">View-A-Team</a>
-        <a class="nav-item nav-link" routerLink="/team/{{teamName}}/update">Update-A-Team</a>
-        <a class="nav-item nav-link disabled" routerLink="/team/{{teamName}}/compete">Compete</a>
+        <a class="nav-item nav-link" *ngIf="teamName" routerLink="/team/{{teamName}}/view">View-A-Team</a>
+        <a class="nav-item nav-link" *ngIf="teamName" routerLink="/team/{{teamName}}/update">Update-A-Team</a>
+        <a class="nav-item nav-link disabled" *ngIf="teamName" routerLink="/team/{{teamName}}/compete">Compete</a>
       </div>
     </div>
   </nav>

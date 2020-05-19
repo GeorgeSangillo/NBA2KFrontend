@@ -25,7 +25,14 @@ export class TeamService {
   /** GET Team by teamName. */
   getTeam(teamName: string): Observable<Team> {
     const url = `${this.teamUrl}/getTeam?teamName=${teamName}`;
-    console.log('URL: ' + url);
     return this.http.get<Team>(url, this.httpOptions);
   }
+
+    /** POST new Team. */
+    createTeam(teamName: string, playerOneId: number, playerTwoId: number, playerThreeId: number, playerFourId: number,
+               playerFiveId: number): Observable<Team> {
+      const url = `${this.teamUrl}/createTeam`;
+      console.log(playerOneId);
+      return this.http.post<Team>(url, {teamName, playerOneId, playerTwoId, playerThreeId, playerFourId, playerFiveId}, this.httpOptions);
+    }
 }

@@ -1,1 +1,62 @@
-<p>create-team works!</p>
+<p></p>
+<div class="container mainContainer">
+    <div class="form-group row">
+        <label for="TeamName" class="col-sm-3 col-form-label ">Team Name:</label>
+        <div class="col-auto">
+            <input class="form-control" type='text' id='TeamName' [(ngModel)]=teamName>
+        </div>
+    </div>
+    <div class="form-group row">
+        <label for="PointGuard" class="col-sm-3 col-form-label ">Point Guard:</label>
+        <div class="col-auto">
+            <select class="form-control" id='PointGuard' [(ngModel)]=teamPlayers[0]>
+                <option *ngFor='let player of playersPG' value={{player.playerId}}>{{player.salary}} -
+                    {{player.playerFirstName}}
+                    {{player.playerLastName}}</option>
+            </select>
+        </div>
+    </div>
+    <div class="form-group row">
+        <label for="ShootingGuard" class="col-sm-3 col-form-label ">Shooting Guard:</label>
+        <div class="col-auto">
+            <select class="form-control" id='ShootingGuard' [(ngModel)]=teamPlayers[1]>
+                <option *ngFor='let player of playersSG' value={{player.playerId}}>{{player.salary}} -
+                    {{player.playerFirstName}}
+                    {{player.playerLastName}}</option>
+            </select>
+        </div>
+    </div>
+    <div class="form-group row">
+        <label for="SmallForward" class="col-sm-3 col-form-label ">Small Forward:</label>
+        <div class="col-auto">
+            <select class="form-control" id='SmallForward' [(ngModel)]=teamPlayers[2]>
+                <option *ngFor='let player of playersSF' value={{player.playerId}}>{{player.salary}} -
+                    {{player.playerFirstName}}
+                    {{player.playerLastName}}</option>
+            </select>
+        </div>
+    </div>
+    <div class="form-group row">
+        <label for="PowerForward" class="col-sm-3 col-form-label ">Power Forward:</label>
+        <div class="col-auto">
+            <select class="form-control" id='PowerForward' [(ngModel)]=teamPlayers[3]>
+                <option *ngFor='let player of playersSF' value={{player.playerId}}>{{player.salary}} -
+                    {{player.playerFirstName}}
+                    {{player.playerLastName}}</option>
+            </select>
+        </div>
+    </div>
+    <div class="form-group row">
+        <label for="Center" class="col-sm-3 col-form-label ">Center:</label>
+        <div class="col-auto">
+            <select class="form-control" id='Center' [(ngModel)]=teamPlayers[4]>
+                <option *ngFor='let player of playersC' value={{player.playerId}}>{{player.salary}} -
+                    {{player.playerFirstName}}
+                    {{player.playerLastName}}</option>
+            </select>
+        </div>
+    </div>
+    <div class="col-sm-1">
+        <button type="submit" class="btn" (click)="createTeam()">Create</button>
+    </div>
+</div>

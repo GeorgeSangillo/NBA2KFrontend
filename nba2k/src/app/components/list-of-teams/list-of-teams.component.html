@@ -1,17 +1,9 @@
-<p>list-of-teams works!</p>
-
-<!--     <table class="table" *ngIf='teams'>
-        <tbody>
-            <tr *ngFor='let team of teams'>
-                <td>
-                    {{team.teamName}}
-                </td>
-            </tr>
-        </tbody>
-    </table> -->
-
-    <ol *ngIf='teams'>
-        <li *ngFor='let team of teams'>
-            <span>{{team.teamName}}</span>
-        </li>
-    </ol>
+<h4 id="Title">Team Rolodex</h4>
+<nav class="navbar">
+      <div class="navbar-nav">
+          <div *ngFor='let team of teams'>
+            <a class="nav-item nav-link" routerLink="/team/{{team.teamName}}/load">{{team.teamName}}</a>
+            <hr>
+          </div>
+      </div>
+  </nav>

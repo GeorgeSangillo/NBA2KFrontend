@@ -12,6 +12,8 @@ import { PlayerService } from './services/player/player.service';
 import { TeamService } from './services/team/team.service';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { ListOfTeamsComponent } from './components/list-of-teams/list-of-teams.component';
+import { LoadTeamComponent } from './components/load-team/load-team.component';
+import { SharedDataService } from './services/shared-data/shared-data.service';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,8 @@ import { ListOfTeamsComponent } from './components/list-of-teams/list-of-teams.c
     CreateTeamComponent,
     UpdateTeamComponent,
     NavbarComponent,
-    ListOfTeamsComponent
+    ListOfTeamsComponent,
+    LoadTeamComponent
   ],
   imports: [
     BrowserModule,
@@ -28,7 +31,7 @@ import { ListOfTeamsComponent } from './components/list-of-teams/list-of-teams.c
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [PlayerService, TeamService],
+  providers: [PlayerService, TeamService, SharedDataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

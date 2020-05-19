@@ -21,12 +21,10 @@ export class ViewTeamComponent implements OnInit {
 
   getTeam(): void {
     const teamName = this.route.snapshot.paramMap.get('teamName');
-    console.log(teamName);
-    this.teamServ.getTeam('NumbaTwo')
+    this.teamServ.getTeam(teamName)
       .subscribe(
         team => {
           this.team = team;
-          console.log(team);
         }
       );
   }
