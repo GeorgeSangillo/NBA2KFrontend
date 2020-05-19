@@ -3,6 +3,7 @@ import { PlayerService } from 'src/app/services/player/player.service';
 import { TeamService } from 'src/app/services/team/team.service';
 import { Player } from 'src/app/models/player';
 import { Team } from 'src/app/models/team';
+import { SharedDataService } from 'src/app/services/shared-data/shared-data.service';
 
 @Component({
   selector: 'app-create-team',
@@ -25,9 +26,10 @@ export class CreateTeamComponent implements OnInit {
 
   test: any;
 
-  constructor(private playServ: PlayerService, private teamServ: TeamService) { }
+  constructor(private playServ: PlayerService, private teamServ: TeamService, private sharedData: SharedDataService) { }
 
   ngOnInit(): void {
+    this.sharedData.updateName(null);
     this.getAllPlayers();
     this.teamPlayers = [0, 0, 0, 0, 0];
     this.teamSalaries = [0, 0, 0, 0, 0];
