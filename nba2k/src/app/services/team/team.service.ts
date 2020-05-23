@@ -32,7 +32,12 @@ export class TeamService {
     createTeam(teamName: string, playerOneId: number, playerTwoId: number, playerThreeId: number, playerFourId: number,
                playerFiveId: number): Observable<Team> {
       const url = `${this.teamUrl}/createTeam`;
-      console.log(playerOneId);
       return this.http.post<Team>(url, {teamName, playerOneId, playerTwoId, playerThreeId, playerFourId, playerFiveId}, this.httpOptions);
     }
+
+      /** GET Result of Team vs Teams by teamNames. */
+  competeTeams(teamNames: string[]): Observable<string[]> {
+    const url = `${this.teamUrl}/${teamNames[0]}vs${teamNames[1]}`;
+    return this.http.get<string[]>(url, this.httpOptions);
+  }
 }

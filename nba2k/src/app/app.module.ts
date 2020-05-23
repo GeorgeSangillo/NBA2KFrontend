@@ -14,6 +14,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { ListOfTeamsComponent } from './components/list-of-teams/list-of-teams.component';
 import { LoadTeamComponent } from './components/load-team/load-team.component';
 import { SharedDataService } from './services/shared-data/shared-data.service';
+import { CompeteTeamComponent } from './components/compete-team/compete-team.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { SharedDataService } from './services/shared-data/shared-data.service';
     UpdateTeamComponent,
     NavbarComponent,
     ListOfTeamsComponent,
-    LoadTeamComponent
+    LoadTeamComponent,
+    CompeteTeamComponent
   ],
   imports: [
     BrowserModule,

@@ -9,7 +9,7 @@
     <div class="form-group row">
         <label for="PointGuard" class="col-sm-3 col-form-label ">Point Guard:</label>
         <div class="col-auto">
-            <select class="form-control" id='PointGuard' [(ngModel)]=teamPlayers[0]>
+            <select class="form-control" id='PointGuard' [(ngModel)]=+teamPlayers[0]>
                 <option *ngFor='let player of playersPG' value={{player.playerId}}>{{player.salary}} -
                     {{player.playerFirstName}}
                     {{player.playerLastName}}</option>
@@ -40,7 +40,7 @@
         <label for="PowerForward" class="col-sm-3 col-form-label ">Power Forward:</label>
         <div class="col-auto">
             <select class="form-control" id='PowerForward' [(ngModel)]=teamPlayers[3]>
-                <option *ngFor='let player of playersSF' value={{player.playerId}}>{{player.salary}} -
+                <option *ngFor='let player of playersPF' value={{player.playerId}}>{{player.salary}} -
                     {{player.playerFirstName}}
                     {{player.playerLastName}}</option>
             </select>
